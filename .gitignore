@@ -1,0 +1,6 @@
+node_modules/
+Lib/
+/Lib/site-packages
+/server/static/snapshots
+/park_with_harry/Lib
+/Lib

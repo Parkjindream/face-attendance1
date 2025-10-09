@@ -1,0 +1,21 @@
+{
+  "start": "16:38",
+  "end": "16:39",
+  "det": {
+    "strict": 0.62,
+    "loose": 0.75,
+    "votes": 2,
+    "window": 3.0,
+    "model": "hog",
+    "upsample": 1,
+    "jitters": 1,
+    "margin": 0.03,
+    "min_face": 50,
+    "jpeg_quality": 80,
+    "scale": 0.5,
+    "detect_stride": 3,
+    "alpha": 0.18,
+    "max_locs": 6
+  },
+  "windows": []
+}

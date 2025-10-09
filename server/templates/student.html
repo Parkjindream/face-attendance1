@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Student Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#camera">Camera</a></li>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#status">My Status</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="camera" class="section-container">
+            <h2>Camera Stream</h2>
+            <div class="camera-container">
+                <img src="/video_feed" alt="Camera feed" id="cameraFeed">
+            </div>
+        </section>
+
+        <section id="summary" class="section-container">
+            <h2>Summary of Attendance</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ชื่อ</th>
+                            <th>รหัสนักศึกษา</th>
+                            <th>การเช็คชื่อ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceSummary">
+                        <!-- จะแสดงข้อมูลสรุปที่ได้จาก API -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="status" class="section-container">
+            <h2>My Attendance Status</h2>
+            <p>สถานะการเช็คชื่อของคุณ: <span id="myStatus">กำลังเช็ค</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <small>© Classroom Face System</small>
+    </footer>
+
+    <script>
+        // Fetch สรุปการเช็คชื่อ
+        async function fetchAttendanceSummary() {
+            const response = await fetch('/attendance_summary');
+            const data = await response.json();
+            const summaryTable = document.getElementById('attendanceSummary');
+            summaryTable.innerHTML = "";
+            data.summary.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${item.name}</td><td>${item.student_id}</td><td>${item.count}</td>`;
+                summaryTable.appendChild(row);
+            });
+        }
+
+        // Fetch สถานะของนักเรียน
+        async function fetchMyStatus() {
+            const response = await fetch('/get_status');
+            const data = await response.json();
+            const myStatus = document.getElementById('myStatus');
+            myStatus.textContent = data.active ? "กำลังเช็คชื่อ" : "รอรอบเช็คชื่อ";
+        }
+
+        // เรียกใช้ฟังก์ชั่น
+        fetchAttendanceSummary();
+        fetchMyStatus();
+    </script>
+</body>
+</html>
+

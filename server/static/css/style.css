@@ -1,0 +1,67 @@
+/* server/static/css/style.css */
+:root{
+  --purple:#6a0dad;
+  --purple-2:#8353d1;
+  --bg:#ffffff;
+  --ink:#1f1f28;
+  --muted:#7a7a8c;
+  --surface:#f7f3ff;
+  --danger:#d7263d;
+  --radius:14px;
+  --shadow: 0 10px 24px rgba(106,13,173,.15);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+
+.topbar{
+  background:linear-gradient(90deg,var(--purple),var(--purple-2));
+  color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between
+}
+.topbar h1{margin:0;font-size:20px;font-weight:700}
+.topbar .status{opacity:.95;font-weight:600}
+
+.tabs{display:flex;gap:8px;padding:14px 18px;background:var(--surface);border-bottom:1px solid #eee}
+.tab{
+  border:none;background:#fff;color:var(--purple);padding:10px 16px;border-radius:999px;
+  font-weight:700;cursor:pointer;box-shadow:var(--shadow);transition:.2s
+}
+.tab.active{background:var(--purple);color:#fff;transform:translateY(-1px)}
+.tab:hover{filter:brightness(1.05)}
+
+main{max-width:980px;margin:26px auto;padding:0 16px}
+section.tab-panel{display:none}
+section.tab-panel.active{display:block;animation:fade .15s ease}
+@keyframes fade{from{opacity:.6;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+h2{margin:0 0 16px 0}
+h3{margin:24px 0 12px 0}
+
+form{
+  background:#fff;border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);display:grid;gap:10px;
+}
+label{font-weight:600;color:var(--muted);font-size:14px}
+input[type=text], input[type=number], select{
+  padding:10px;border-radius:10px;border:1px solid #e7e7ef;outline:none
+}
+input[type=file]{padding:8px;border-radius:10px;background:#fafafa;border:1px dashed #ddd}
+button{
+  background:var(--purple);color:#fff;border:none;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer
+}
+button:hover{filter:brightness(1.05)}
+button.danger{background:var(--danger)}
+
+.result{
+  background:#0f102a;color:#d4e0ff;padding:12px;border-radius:12px;overflow:auto;box-shadow:var(--shadow)
+}
+
+.face-list{list-style:none;padding:0;margin:0 0 16px 0;display:grid;gap:8px}
+.face-list li{
+  display:flex;align-items:center;justify-content:space-between;background:#fff;padding:12px 14px;
+  border-radius:12px;box-shadow:var(--shadow)
+}
+.row{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px 0;gap:10px}
+
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;margin-top:8px}
+
+footer{padding:20px;text-align:center;color:var(--muted)}

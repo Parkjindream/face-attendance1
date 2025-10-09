@@ -1,0 +1,46 @@
+{"time": "2025-08-17T13:23:12.034961", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 100.0, "matched": true, "distance": 0.0}}
+{"time": "2025-08-17T13:36:34.838603", "action": "identify", "detail": {"name": "นางสาวสุพิชญา สงวนโอษฐ", "confidence": 100.0, "matched": true, "distance": 0.0}}
+{"time": "2025-08-17T13:36:34.838603", "action": "identify", "detail": {"name": "Unknown", "confidence": 0.0, "matched": false, "distance": 0.8257}}
+{"time": "2025-08-17T13:41:27.071814", "action": "identify", "detail": {"name": "นางสาวสุณัฐชา แก้วลา", "confidence": 100.0, "matched": true, "distance": 0.0}}
+{"time": "2025-08-17T14:06:16.818535", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 26.63, "matched": true, "distance": 0.4402}}
+{"time": "2025-08-17T14:06:19.812289", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 25.4, "matched": true, "distance": 0.4476}}
+{"time": "2025-08-17T14:06:22.881357", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 27.58, "matched": true, "distance": 0.4345}}
+{"time": "2025-08-17T14:06:25.864662", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 37.0, "matched": true, "distance": 0.378}}
+{"time": "2025-08-17T14:06:40.820095", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 28.12, "matched": true, "distance": 0.4313}}
+{"time": "2025-08-17T14:06:58.819446", "action": "identify", "detail": {"name": "Unknown", "confidence": 0.0, "matched": false, "distance": 0.6888}}
+{"time": "2025-08-17T14:07:01.827882", "action": "identify", "detail": {"name": "นางสาวสุณัฐชา แก้วลา", "confidence": 38.64, "matched": true, "distance": 0.3681}}
+{"time": "2025-08-17T14:07:04.855964", "action": "identify", "detail": {"name": "นางสาวสุณัฐชา แก้วลา", "confidence": 37.32, "matched": true, "distance": 0.3761}}
+{"time": "2025-08-17T14:07:07.816997", "action": "identify", "detail": {"name": "นางสาวสุณัฐชา แก้วลา", "confidence": 21.91, "matched": true, "distance": 0.4685}}
+{"time": "2025-08-17T14:07:13.813563", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 21.89, "matched": true, "distance": 0.4687}}
+{"time": "2025-08-17T14:07:19.815556", "action": "identify", "detail": {"name": "นางสาวสุพิชญา สงวนโอษฐ", "confidence": 43.22, "matched": true, "distance": 0.3407}}
+{"time": "2025-08-17T14:07:22.822564", "action": "identify", "detail": {"name": "นางสาวสุพิชญา สงวนโอษฐ", "confidence": 45.88, "matched": true, "distance": 0.3247}}
+{"time": "2025-08-17T14:07:25.817659", "action": "identify", "detail": {"name": "นางสาวสุพิชญา สงวนโอษฐ", "confidence": 36.3, "matched": true, "distance": 0.3822}}
+{"time": "2025-08-17T14:07:34.815638", "action": "identify", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "confidence": 24.67, "matched": true, "distance": 0.452}}
+{"time": "2025-08-17T14:14:41.409798", "action": "identify", "detail": {"name": "นางสาวสุพิชญา สงวนโอษฐ", "confidence": 100.0, "matched": true, "distance": 0.0}}
+{"time": "2025-08-17T14:14:41.409798", "action": "identify", "detail": {"name": "Unknown", "confidence": 0.0, "matched": false, "distance": 0.8257}}
+{"time": "2025-08-17T14:15:46.866170", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "snapshot": "/static/snapshots/นางสาวอธิชนัน_ประวันจะ_20250817_141546.jpg"}}
+{"time": "2025-08-17T14:16:04.322834", "action": "attend", "detail": {"name": "นางสาวสุณัฐชา แก้วลา", "snapshot": "/static/snapshots/นางสาวสุณัฐชา_แก้วลา_20250817_141604.jpg"}}
+{"time": "2025-08-17T14:16:27.810436", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "snapshot": "/static/snapshots/นางสาววรัทยา_รอดเมล์_20250817_141627.jpg"}}
+{"time": "2025-08-17T14:16:39.696576", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "snapshot": "/static/snapshots/นางสาวอธิชนัน_ประวันจะ_20250817_141639.jpg"}}
+{"time": "2025-08-17T14:17:03.340324", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "snapshot": "/static/snapshots/นางสาววรัทยา_รอดเมล์_20250817_141703.jpg"}}
+{"time": "2025-08-17T14:17:10.085459", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "snapshot": "/static/snapshots/นางสาวอธิชนัน_ประวันจะ_20250817_141710.jpg"}}
+{"time": "2025-08-17T14:25:44", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:25:44", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-25-44.jpg"}}
+{"time": "2025-08-17T14:26:00", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "time": "2025-08-17 14:26:00", "snapshot": "/static/snapshots/นางสาววรัทยา รอดเมล์_2025-08-17_14-26-00.jpg"}}
+{"time": "2025-08-17T14:26:33", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "time": "2025-08-17 14:26:33", "snapshot": "/static/snapshots/นางสาววรัทยา รอดเมล์_2025-08-17_14-26-33.jpg"}}
+{"time": "2025-08-17T14:27:09", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:27:09", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-27-09.jpg"}}
+{"time": "2025-08-17T14:27:09", "action": "attend", "detail": {"name": "นางสาวสุพิชญา สงวนโอษฐ", "time": "2025-08-17 14:27:09", "snapshot": "/static/snapshots/นางสาวสุพิชญา สงวนโอษฐ_2025-08-17_14-27-09.jpg"}}
+{"time": "2025-08-17T14:27:40", "action": "attend", "detail": {"name": "นางสาวสุพิชญา สงวนโอษฐ", "time": "2025-08-17 14:27:40", "snapshot": "/static/snapshots/นางสาวสุพิชญา สงวนโอษฐ_2025-08-17_14-27-40.jpg"}}
+{"time": "2025-08-17T14:28:14", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "time": "2025-08-17 14:28:14", "snapshot": "/static/snapshots/นางสาววรัทยา รอดเมล์_2025-08-17_14-28-14.jpg"}}
+{"time": "2025-08-17T14:28:14", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:28:14", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-28-14.jpg"}}
+{"time": "2025-08-17T14:35:44", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:35:44", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-35-44.jpg"}}
+{"time": "2025-08-17T14:36:15", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:36:15", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-36-15.jpg"}}
+{"time": "2025-08-17T14:36:30", "action": "attend", "detail": {"name": "นางสาวสุณัฐชา แก้วลา", "time": "2025-08-17 14:36:30", "snapshot": "/static/snapshots/นางสาวสุณัฐชา แก้วลา_2025-08-17_14-36-30.jpg"}}
+{"time": "2025-08-17T14:36:45", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:36:45", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-36-45.jpg"}}
+{"time": "2025-08-17T14:36:46", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "time": "2025-08-17 14:36:46", "snapshot": "/static/snapshots/นางสาววรัทยา รอดเมล์_2025-08-17_14-36-46.jpg"}}
+{"time": "2025-08-17T14:37:58", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:37:58", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-37-58.jpg"}}
+{"time": "2025-08-17T14:39:47", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:39:47", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-39-47.jpg"}}
+{"time": "2025-08-17T14:40:29", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:40:29", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-40-29.jpg"}}
+{"time": "2025-08-17T14:41:21", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "time": "2025-08-17 14:41:21", "snapshot": "/static/snapshots/นางสาววรัทยา รอดเมล์_2025-08-17_14-41-21.jpg"}}
+{"time": "2025-08-17T14:43:44", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:43:44", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-43-44.jpg"}}
+{"time": "2025-08-17T14:44:33", "action": "attend", "detail": {"name": "นางสาวอธิชนัน ประวันจะ", "time": "2025-08-17 14:44:33", "snapshot": "/static/snapshots/นางสาวอธิชนัน ประวันจะ_2025-08-17_14-44-33.jpg"}}
+{"time": "2025-08-17T14:44:37", "action": "attend", "detail": {"name": "นางสาววรัทยา รอดเมล์", "time": "2025-08-17 14:44:37", "snapshot": "/static/snapshots/นางสาววรัทยา รอดเมล์_2025-08-17_14-44-37.jpg"}}
