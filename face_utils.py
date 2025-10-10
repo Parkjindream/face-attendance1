@@ -10,3 +10,8 @@ def load_known_encodings():
     conn = get_connection()
   cursor = conn.cursor()
     cursor.execute("SELECT student_id, encoding FROM encodings")
+ records = cursor.fetchall()
+    conn.close()
+
+    known_encodings = []
+    known_ids = []
