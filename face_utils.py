@@ -15,3 +15,8 @@ def load_known_encodings():
 
     known_encodings = []
     known_ids = []
+
+for row in records:
+    student_id = row['student_id']
+    encodeing = np.frombuffe(row['encoding'], dtype=np.float64)
+    
