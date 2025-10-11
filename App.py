@@ -14,3 +14,13 @@ init_db()
 
 # Cache to prevent duplicate recognition
 recognition_cache = {}
+
+@app.route('/api/recognize', methods=['POST'])
+def recognize():
+    data = request.json
+    image_b64 = data.get('image')
+    timestamp = data.get('timestamp')
+    camera_id = data.get('camera_id', 'unknown')
+
+    if not image_b64 or not timestamp:
+        return jsonify({'error': 'Missing image or timestamp'}), 400
