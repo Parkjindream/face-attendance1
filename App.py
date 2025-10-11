@@ -32,3 +32,13 @@ def recognize():
     if last_sent_time and (now - last_sent_time).total_seconds() < CACHE_INTERVAL_SECONDS:
         return jsonify({'status': 'skipped, cached'}), 200
     recognition_cache[camera_id] = now
+
+    # Decode image
+    image_bytes = base64.b64decode(image_b64)
+    np_arr = np.frombuffer(image_bytes, np.uint8)
+    img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+
+    # Get face encoding
+    encoding = get_face_encoding(img)
+    if encoding is None:
+        return jsonify({'status': 'No face detected'}), 200
