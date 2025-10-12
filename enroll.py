@@ -16,3 +16,5 @@ def enroll_student(student_id, name, image_path):
     if encoding is None:
         print(f"No face found in image {image_path}")
         return False
+  # Add student to DB
+    add_student(student_id, name)
