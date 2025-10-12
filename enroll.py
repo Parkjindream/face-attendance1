@@ -11,3 +11,8 @@ def enroll_student(student_id, name, image_path):
     if image is None:
         print(f"Error: Cannot load image {image_path}")
         return False
+  # Get encoding
+    encoding = get_face_encoding(image)
+    if encoding is None:
+        print(f"No face found in image {image_path}")
+        return False
