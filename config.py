@@ -19,3 +19,12 @@ CACHE_INTERVAL_SECONDS = 30         # Time interval to prevent duplicate logs
 # Attendance settings
 ATTENDANCE_START_TIME = "08:30"    # HH:MM, class start time
 LATE_THRESHOLD_MINUTES = 10         # After this time, status = 'Late'
+
+# Security / Encryption key (symmetric for demo purposes)
+# In production, store securely e.g., environment variable / secret manager
+SECRET_KEY = 'your-secret-key-for-encoding-encryption'
+
+# Server settings
+SERVER_HOST = '0.0.0.0'
+SERVER_PORT = 5000
+DEBUG = True
