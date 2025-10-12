@@ -46,3 +46,24 @@ def recognize():
 
     known_encodings, known_ids = load_known_encodings()
     student_id, distance = match_face(encoding, known_encodings, known_ids, FACE_MATCH_THRESHOLD)
+
+    status = None
+    if student_id:
+        start_time = datetime.strptime(ATTENDANCE_START_TIME, '%H:%M').time()
+        late_time = (datetime.combine(now.date(), start_time) + timedelta(minutes=LATE_THRESHOLD_MINUTES)).time()
+        if now.time() <= late_time:
+            status = 'On Time'
+        else:
+            status = 'Late'
+
+        conn = get_connection()
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO attendance_logs (student_id, timestamp, status, match_score, camera_id) VALUES (?, ?, ?, ?, ?)",
+                       (student_id, now.isoformat(), status, distance, camera_id))
+        conn.commit()
+        conn.close()
+
+        return jsonify({'status': status, 'student_id': student_id, 'distance': distance}), 200
+    else:
+        return jsonify({'status': 'Unknown', 'distance': distance}), 200
+
