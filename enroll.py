@@ -28,3 +28,5 @@ def enroll_student(student_id, name, image_path):
   # Optionally save encoding as npy file
     npy_path = os.path.join(ENCODINGS_DIR, f"{student_id}.npy")
     np.save(npy_path, encoding)
+    print(f"Enrolled student {name} ({student_id}) successfully.")
+    return True
