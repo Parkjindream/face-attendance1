@@ -1,0 +1,16 @@
+print("Press 'q' to quit")
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        print("Failed to grab frame")
+        break
+
+    # Show frame
+    cv2.imshow('Camera', frame)
+
+    # Encode image to send
+    _, buffer = cv2.imencode('.jpg', frame)
+    jpg_as_text = base64.b64encode(buffer).decode('utf-8')
+
+    timestamp = datetime.now().isoformat()
