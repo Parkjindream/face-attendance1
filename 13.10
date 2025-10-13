@@ -1,0 +1,20 @@
+# Check cache
+    key = 'last_frame'
+    now_ts = time.time()
+    if key in last_sent and now_ts - last_sent[key] < CACHE_INTERVAL_SECONDS:
+        pass  # skip sending
+    else:
+        payload = {
+            'image': jpg_as_text,
+            'timestamp': timestamp,
+            'camera_id': 'camera_01'
+        }
+        try:
+            response = requests.post(API_URL, json=payload, timeout=5)
+            if response.ok:
+                print(response.json())
+            else:
+                print("Server error", response.status_code)
+        except Exception as e:
+            print("Error sending request:", e)
+        last_sent[key] = now_ts
