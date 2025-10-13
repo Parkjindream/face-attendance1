@@ -33,3 +33,11 @@ def get_face_encoding(image):
     else:
         return None
 
+  distances = face_recognition.face_distance(known_encodings, face_encoding)
+    min_distance = np.min(distances)
+    best_match_index = np.argmin(distances)
+
+    if min_distance <= threshold:
+        return known_ids[best_match_index], float(min_distance)
+    else:
+        return None, float(min_distance)
