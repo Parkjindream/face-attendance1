@@ -30,3 +30,10 @@ def enroll_student(student_id, name, image_path):
     np.save(npy_path, encoding)
     print(f"Enrolled student {name} ({student_id}) successfully.")
     return True
+  
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) != 4:
+        print("Usage: python enroll.py <student_id> <name> <image_path>")
+    else:
+        enroll_student(sys.argv[1], sys.argv[2], sys.argv[3])
