@@ -19,4 +19,17 @@ def load_known_encodings():
 for row in records:
     student_id = row['student_id']
     encodeing = np.frombuffe(row['encoding'], dtype=np.float64)
+    known_encodings.append(encoding)
+    known_ids.append(student_id)
     
+return known_encodings, known_ids
+
+# --- Compute face encoding from image ---
+def get_face_encoding(image):
+    rgb_img = image[:, :, ::-1]  # BGR to RGB
+    encodings = face_recognition.face_encodings(rgb_img)
+    if encodings:
+        return encodings[0]
+    else:
+        return None
+
