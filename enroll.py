@@ -18,3 +18,10 @@ def enroll_student(student_id, name, image_path):
         return False
   # Add student to DB
     add_student(student_id, name)
+  # Save encoding to DB
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO encodings (student_id, encoding, source) VALUES (?, ?, ?)"
+                   , (student_id, encoding.tobytes(), os.path.basename(image_path)))
+    conn.commit()
+    conn.close()
