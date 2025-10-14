@@ -95,3 +95,5 @@ def export():
     df.to_excel(export_path, index=False)
     return send_file(export_path, as_attachment=True)
 
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
