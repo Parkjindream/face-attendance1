@@ -43,19 +43,21 @@ def recognize():
     if encoding is None:
         return jsonify({'status': 'No face detected'}), 200
 
-
+    # Load known encodings
     known_encodings, known_ids = load_known_encodings()
+    # Match face
     student_id, distance = match_face(encoding, known_encodings, known_ids, FACE_MATCH_THRESHOLD)
 
     status = None
     if student_id:
+        # Determine attendance status
         start_time = datetime.strptime(ATTENDANCE_START_TIME, '%H:%M').time()
         late_time = (datetime.combine(now.date(), start_time) + timedelta(minutes=LATE_THRESHOLD_MINUTES)).time()
         if now.time() <= late_time:
             status = 'On Time'
         else:
             status = 'Late'
-
+        # Save attendance log
         conn = get_connection()
         cursor = conn.cursor()
         cursor.execute("INSERT INTO attendance_logs (student_id, timestamp, status, match_score, camera_id) VALUES (?, ?, ?, ?, ?)",
