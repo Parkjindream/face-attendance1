@@ -74,3 +74,13 @@ def recognize():
 def api_enroll():
     return jsonify({'status': 'Not implemented'}), 501
 
+# --- Dashboard ---
+@app.route('/dashboard')
+def dashboard():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT al.id, s.student_id, s.name, al.timestamp, al.status FROM attendance_logs al LEFT JOIN students s ON al.student_id = s.student_id ORDER BY al.timestamp DESC")
+    logs = cursor.fetchall()
+    conn.close()
+    return render_template('dashboard.html', logs=logs)
+
