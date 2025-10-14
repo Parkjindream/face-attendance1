@@ -84,3 +84,14 @@ def dashboard():
     conn.close()
     return render_template('dashboard.html', logs=logs)
 
+# --- Export attendance logs to Excel ---
+@app.route('/export')
+def export():
+    conn = get_connection()
+    df = pd.read_sql_query("SELECT al.id, s.student_id, s.name, al.timestamp, al.status FROM attendance_logs al LEFT JOIN students s ON al.student_id = s.student_id ORDER BY al.timestamp", conn)
+    conn.close()
+
+    export_path = os.path.join(EXPORT_DIR, f'attendance_{datetime.now().strftime("%Y%m%d_%H%M%S")}.xlsx')
+    df.to_excel(export_path, index=False)
+    return send_file(export_path, as_attachment=True)
+
