@@ -1,0 +1,3 @@
+# python_root/camera_client.py
+import cv2
+import requests

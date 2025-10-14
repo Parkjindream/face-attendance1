@@ -45,6 +45,10 @@ def recognize():
 
     # Load known encodings
     known_encodings, known_ids = load_known_encodings()
+ add-app
+
+
+ main
     # Match face
     student_id, distance = match_face(encoding, known_encodings, known_ids, FACE_MATCH_THRESHOLD)
 
