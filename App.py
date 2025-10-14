@@ -43,8 +43,10 @@ def recognize():
     if encoding is None:
         return jsonify({'status': 'No face detected'}), 200
 
-
+    # Load known encodings
     known_encodings, known_ids = load_known_encodings()
+
+    # Match face
     student_id, distance = match_face(encoding, known_encodings, known_ids, FACE_MATCH_THRESHOLD)
 
     status = None
