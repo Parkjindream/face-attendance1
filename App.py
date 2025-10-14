@@ -45,19 +45,23 @@ def recognize():
 
     # Load known encodings
     known_encodings, known_ids = load_known_encodings()
+ add-app
 
+
+ main
     # Match face
     student_id, distance = match_face(encoding, known_encodings, known_ids, FACE_MATCH_THRESHOLD)
 
     status = None
     if student_id:
+        # Determine attendance status
         start_time = datetime.strptime(ATTENDANCE_START_TIME, '%H:%M').time()
         late_time = (datetime.combine(now.date(), start_time) + timedelta(minutes=LATE_THRESHOLD_MINUTES)).time()
         if now.time() <= late_time:
             status = 'On Time'
         else:
             status = 'Late'
-
+        # Save attendance log
         conn = get_connection()
         cursor = conn.cursor()
         cursor.execute("INSERT INTO attendance_logs (student_id, timestamp, status, match_score, camera_id) VALUES (?, ?, ?, ?, ?)",
@@ -69,3 +73,31 @@ def recognize():
     else:
         return jsonify({'status': 'Unknown', 'distance': distance}), 200
 
+# --- API: enroll student via image upload ---
+@app.route('/api/enroll', methods=['POST'])
+def api_enroll():
+    return jsonify({'status': 'Not implemented'}), 501
+
+# --- Dashboard ---
+@app.route('/dashboard')
+def dashboard():
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT al.id, s.student_id, s.name, al.timestamp, al.status FROM attendance_logs al LEFT JOIN students s ON al.student_id = s.student_id ORDER BY al.timestamp DESC")
+    logs = cursor.fetchall()
+    conn.close()
+    return render_template('dashboard.html', logs=logs)
+
+# --- Export attendance logs to Excel ---
+@app.route('/export')
+def export():
+    conn = get_connection()
+    df = pd.read_sql_query("SELECT al.id, s.student_id, s.name, al.timestamp, al.status FROM attendance_logs al LEFT JOIN students s ON al.student_id = s.student_id ORDER BY al.timestamp", conn)
+    conn.close()
+
+    export_path = os.path.join(EXPORT_DIR, f'attendance_{datetime.now().strftime("%Y%m%d_%H%M%S")}.xlsx')
+    df.to_excel(export_path, index=False)
+    return send_file(export_path, as_attachment=True)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
