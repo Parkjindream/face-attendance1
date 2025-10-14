@@ -69,3 +69,8 @@ def recognize():
     else:
         return jsonify({'status': 'Unknown', 'distance': distance}), 200
 
+# --- API: enroll student via image upload ---
+@app.route('/api/enroll', methods=['POST'])
+def api_enroll():
+    return jsonify({'status': 'Not implemented'}), 501
+
